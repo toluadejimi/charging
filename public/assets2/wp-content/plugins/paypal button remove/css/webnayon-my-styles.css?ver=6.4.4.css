@@ -1,0 +1,23 @@
+
+
+/*
+===================================
+Custom css for paypal button remove
+===================================
+*/
+
+#order_review{
+    overflow: hidden !important;
+}
+
+#woo_pp_ec_button_checkout {
+    margin-bottom: -70px !important;
+}
+
+.paypal-buttons.paypal-buttons-context-iframe.paypal-buttons-label-paypal.paypal-buttons-layout-vertical {
+    display: none !important;
+}
+
+@media (max-width: 921px){#woo_pp_ec_button_checkout {
+    margin-bottom: -65px !important;
+}}
