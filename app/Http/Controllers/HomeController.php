@@ -42,10 +42,6 @@ class HomeController extends Controller
     public function assign_box_now(request $request)
     {
 
-
-
-
-
         $now = Carbon::now();
         $code = random_int(00000, 99999);
         $trx = new Transaction();
@@ -66,6 +62,7 @@ class HomeController extends Controller
         $data['code'] = $trx->code;
         $data['amount'] = $trx->amount;
         $data['time_out'] = $trx->time_out;
+        $data['box'] = $trx->name;
 
 
         return view('success', $data);

@@ -7,6 +7,7 @@
         <div class="receipt text-center">
             <h4 class="fw-bold">✅ SUCCESS</h4>
             <hr>
+            <p><strong>BOX:</strong>{{$box}}</p>
             <p><strong>Check In TIme:</strong>{{$time_in}}</p>
             <p><strong>Check Out TIme:</strong>{{$time_out}}</p>
             <p><strong>C-Code:</strong>{{$code}}</p>
