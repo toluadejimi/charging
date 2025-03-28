@@ -7,11 +7,20 @@
         <div class="receipt text-center">
             <h4 class="fw-bold">✅ SUCCESS</h4>
             <hr>
-            <p><strong>Check In TIme:</strong> {{$time_in}}</p>
-            <p><strong>Check Out TIme:</strong> {{$time_out}}</p>
-            <p><strong>C-Code:</strong> {{$code}}</p>
-            <p><strong>Amount:</strong> ₦{{ number_format($amount ?? 0, 2) }}</p>
+            <p><strong>Check In TIme:</strong>{{$time_in}}</p>
+            <p><strong>Check Out TIme:</strong>{{$time_out}}</p>
+            <p><strong>C-Code:</strong>{{$code}}</p>
+            <p><strong>Amount:</strong>₦{{ number_format($amount ?? 0, 2) }}</p>
             <hr>
+            <p class="fw-bold">Terms and Condition</p>
+
+
+            <ul>
+                <li>  No Extension plug is allowed  </li>
+                <li>  ₦ 5,000 penalty for lost or missing key  </li>
+                <li>  ₦ 2,000 penalty for late check out  </li>
+            </ul>
+
             <p class="fw-bold">Thank you for your business!</p>
         </div>
     </div>
@@ -23,7 +32,7 @@
     <style>
         body { background: #f8f9fa; }
         .receipt-container {
-            max-width: 80mm;
+            max-width: 100mm;
             margin: auto;
             padding: 10px;
             background: white;
