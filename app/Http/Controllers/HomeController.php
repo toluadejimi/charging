@@ -62,7 +62,7 @@ class HomeController extends Controller
         $data['code'] = $trx->code;
         $data['amount'] = $trx->amount;
         $data['time_out'] = $trx->time_out;
-        $data['box'] = $trx->name;
+        $data['box'] = $trx->box_id;
 
 
         return view('success', $data);
