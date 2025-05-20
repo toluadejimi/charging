@@ -37,7 +37,7 @@ class HomeController extends Controller
             $trx->name = $request->name;
             $trx->phone = $request->phone;
             $trx->address = $request->address;
-            $trx->item = $request->item;
+            $trx->items = $request->item;
             $trx->code = $request->code;
             $trx->save();
 
