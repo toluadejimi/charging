@@ -26,7 +26,7 @@ class HomeController extends Controller
 
         $ck_box = Transaction::where('code', $request->code)->first()->status ?? null;
         if($ck_box == 0){
-            Transaction::where('code', $request->code)->update(['status', 1]);
+            Transaction::where('code', $request->code)->update(['status' => 1]);
             return response()->json([
                 'success' => true
             ]);
