@@ -33,7 +33,7 @@ class HomeController extends Controller
         }else{
             return response()->json([
                 'success' => false,
-                'error_code' => "Box already checked out"
+                'errorCode' => "Box already checked out"
             ]);
         }
 
