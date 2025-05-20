@@ -48,6 +48,16 @@ class HomeController extends Controller
         $box = Box::where('title', $noSpaces)->first() ?? null;
 
 
+        if ($ck_box != null  && $ck_box->status == 0) {
+
+            return response()->json([
+                'status' => false,
+                'message' => "Box has already occupied"
+            ]);
+
+        }
+
+
         if ($ck_box == null) {
             $codes = rand(1000, 9999);
             $code = str_pad($codes, 4, '0', STR_PAD_LEFT);
