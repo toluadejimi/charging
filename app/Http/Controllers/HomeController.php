@@ -48,7 +48,7 @@ class HomeController extends Controller
         $box = Box::where('title', $noSpaces)->first() ?? null;
 
 
-        if ($box != null  && $box->status == 0) {
+        if ($box->status == 0) {
             return response()->json([
                 'status' => false,
                 'message' => "Box has already occupied"
