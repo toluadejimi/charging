@@ -33,7 +33,6 @@ class HomeController extends Controller
             $codes = rand(1000, 9999);
             $code = str_pad($codes, 4, '0', STR_PAD_LEFT);
             $trx = new Transaction();
-            $trx->box_id = $box->id;
             $trx->box_title = $request->box_number;
             $trx->name = $request->name;
             $trx->phone = $request->phone;
