@@ -50,7 +50,7 @@ class HomeController extends Controller
 
 
 
-        if ($boxck->status == 0) {
+        if ($boxck != null && $boxck->status == 0) {
             return response()->json([
                 'status' => false,
                 'message' => "Box has already occupied"
