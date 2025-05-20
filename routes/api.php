@@ -19,25 +19,7 @@ use App\Http\Controllers\HomeController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::any('w-webhook',  [HomeController::class,'world_webhook']);
-Route::any('d-webhook',  [HomeController::class,'diasy_webhook']);
-
-Route::any('e_fund',  [HomeController::class,'e_fund']);
-Route::any('e_check',  [HomeController::class,'e_check']);
-
-Route::any('verify',  [HomeController::class,'verify_username']);
-
-
-Route::any('balance',  [ApiController::class,'get_balance']);
-Route::any('get-world-countries',  [ApiController::class,'get_world_countries']);
-Route::any('get-world-services',  [ApiController::class,'get_world_services']);
-Route::any('check-world-number-availability',  [ApiController::class,'check_availability']);
-Route::any('rent-world-number',  [ApiController::class,'rent_world_number']);
-Route::any('get-world-sms',  [ApiController::class,'get_world_sms']);
-
-
-
-
+Route::any('submit',  [HomeController::class,'submit']);
 
 
 
