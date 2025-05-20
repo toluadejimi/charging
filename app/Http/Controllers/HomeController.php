@@ -46,9 +46,11 @@ class HomeController extends Controller
         $ck_box = Transaction::where('box_title', $request->box_number)->first()->status ?? null;
         $noSpaces = str_replace(' ', '', $request->box_number);
         $box = Box::where('title', $noSpaces)->first() ?? null;
+        $boxck = Transaction::where('box_title', $noSpaces)->first() ?? null;
 
 
-        if ($box->status == 0) {
+
+        if ($boxck->status == 0) {
             return response()->json([
                 'status' => false,
                 'message' => "Box has already occupied"
