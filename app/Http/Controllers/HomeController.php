@@ -73,18 +73,12 @@ class HomeController extends Controller
 
             return response()->json([
                 'status' => true,
-                'code' => $code
+                'code' => $code,
+                'boxCode' => $request->box_number
             ]);
         }
 
-        if ($ck_box == 1) {
 
-            return response()->json([
-                'status' => false,
-                'message' => "Box has been checked out"
-            ]);
-
-        }
 
         if ($ck_box == 0) {
 
