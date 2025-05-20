@@ -38,7 +38,7 @@ class HomeController extends Controller
             $trx->phone = $request->phone;
             $trx->address = $request->address;
             $trx->items = $request->item;
-            $trx->code = $request->code;
+            $trx->code = $code;
             $trx->save();
 
             return response()->json([
